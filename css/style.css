@@ -1,0 +1,173 @@
+ body{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif;
+    margin: 0;
+    padding: 24px;
+    background: #f6f7fb;
+  }
+
+  #button_area{
+    margin: 12px;
+  }
+  .header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;    
+  }
+  .wrap{
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0,0,0,.08);
+  }
+
+  button{
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  #play_row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* 幅が足りないときに折り返す */
+  margin: 4px 0;
+  }
+
+  .repeat-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;               /* Repeat 左の空白を小さく */
+  }
+
+  #progress_area {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  }
+
+  #progress_area progress {
+  width: 180px; /* 適宜調整 */
+}
+
+  button:hover{ background:#f2f3f7; }
+  button:disabled{ opacity:.5; cursor:not-allowed; }
+
+  textarea{
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    line-height: 1.5;
+    resize: vertical;
+    box-sizing: border-box;
+  }
+
+  #output{
+    white-space: pre-wrap;
+    background: #0b1020;
+    color: #eaf0ff;
+    padding: 14px;
+    border-radius: 12px;
+    line-height: 1.6;
+    min-height: 80px;
+  }
+
+  /* 文字クリックの時の反応 */
+.sent{
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 6px;
+}
+.sent:hover{
+  background: #ffe08a;
+}
+.sent.active{
+  background: #ffd24d;
+}
+
+/* ===== 保存データ表示テーブル（thead対応） ===== */
+
+.data-container{
+  margin-top: 16px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+/* ID列は最小幅・目立たせない */
+.data-container .id {
+  display: none;
+}
+
+/* テーブル本体 */
+.data-container table{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px; /* 2列なのでスマホでも崩れにくい */
+  font-size: 14px;
+}
+
+/* ヘッダー */
+.data-container thead th{
+  text-align: left;
+  padding: 10px 12px;
+  background: #f4f6f8;
+  border-bottom: 2px solid #e5e7eb;
+  color: #111827;
+  font-weight: 700;
+  position: sticky; /* 上に固定（効かない場合は消してOK） */
+  top: 0;
+}
+
+/* セル */
+.data-container tbody td{
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+/* 交互色 */
+.data-container tbody tr:nth-child(even){
+  background: #fafafa;
+}
+
+/* ホバー */
+.data-container tbody tr:hover{
+  background: #eef6ff;
+  cursor: pointer;
+}
+
+/* 1列目（タイトル） */
+.data-container tbody td:first-child{
+  width: 180px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* 2列目（本文） */
+.data-container tbody td:last-child{
+  color: #374151;
+}
+
+/* モバイル */
+@media (max-width: 600px){
+  .data-container table{ font-size: 13px; }
+  .data-container thead th,
+  .data-container tbody td{ padding: 8px; }
+}
+
+.sent.active {
+  background: rgb(78, 29, 9);
+}
