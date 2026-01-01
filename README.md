@@ -1,8 +1,13 @@
 # ①課題名
 Change English Learning ―苦痛前提の学習から、人類を開放せよ―
 
+# デモ動画
+
+
+
+
 ## ②アプリのデプロイURL
-本アプリはPHP/MySQLを使用しているため、ローカル環境XAMPPでの動作を想定しています。デモでは実際の動作を画面共有にて紹介します。
+本アプリはPHP/MySQLをローカル環境XAMPPで動作させています。デモでは実際の動作を画面共有にて紹介します。
 
 ## ③GitHubリポジトリURL
 https://github.com/TSAT08Ryuma/Hackathon20260106
