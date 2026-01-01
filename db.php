@@ -33,7 +33,7 @@ if ($status == false) {
       . h($content)
       . '</td><td class="delete">'
       . '<form method="POST" action="delete.php" >' //nameとvalueを送ってて、nameで取り出してる。テキストエリアとインプットエリアの場合は入っている文字がvalueだから、valueを指定していないが、そうでないボタン系はvalueが何か指定する必要がある
-      . '<input type="hidden" name="id" value="'. h($result['id']) .'">'
+      . '<input type="hidden" name="id" value="' . h($result['id']) . '">'
       . '<button type = "submit" class="delete">削除</button>'
       . '</form>'
       . '</td></tr>';
@@ -56,29 +56,28 @@ if ($status == false) {
     <div class="header">
       <h1>データベース</h1>
     </div>
-  </div>
-  <h2>削除したいものを選んでね</h2>
-  <div class="data-container">
-    <?php if (empty($view)): ?>
-      <!-- もし $view データがない場合の表示 -->
-      <p>まだデータがありません</p>
-    <?php else: ?>
-      <!-- もし $view データが存在する場合 -->
-      <table>
-        <thead>
-          <tr>
-            <th class="id">ID</th>
-            <th>Title</th>
-            <th>Content</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?= $view ?>
-        </tbody>
-      </table>
-    <?php endif; ?>
-  </div>
+    <h2>削除したいものを選んでね</h2>
+    <div class="data-container">
+      <?php if (empty($view)): ?>
+        <!-- もし $view データがない場合の表示 -->
+        <p>まだデータがありません</p>
+      <?php else: ?>
+        <!-- もし $view データが存在する場合 -->
+        <table>
+          <thead>
+            <tr>
+              <th class="id">ID</th>
+              <th>Title</th>
+              <th>Content</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?= $view ?>
+          </tbody>
+        </table>
+      <?php endif; ?>
+    </div>
   </div>
 
 </body>
