@@ -54,7 +54,7 @@ while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
             <h1>Geminiでシャドーイング教材を作ろう</h1>
             <a href="db.php" class="nav-link">データ一覧</a>
         </div>
-        <p>半導体材料からUSスチールの話まで、全部1分の英語にしてあげる。僕 最強だから。</p>
+        <p>半導体材料からUSスチールの話まで、全てを1分の英語に。</p>
         <div id="button_area">
             <div id="play_row">
                 <button id="play">▶ 再生</button>
